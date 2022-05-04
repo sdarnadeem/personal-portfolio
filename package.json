@@ -1,0 +1,27 @@
+{
+  "name": "06.personal-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sanity/client": "^3.3.0",
+    "@sanity/image-url": "^1.0.1",
+    "framer-motion": "^6.3.3",
+    "next": "12.1.5",
+    "next-sanity": "^0.5.2",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-icons": "^4.3.1",
+    "react-tooltip": "^4.2.21",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.5"
+  }
+}
