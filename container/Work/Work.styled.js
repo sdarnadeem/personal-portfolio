@@ -51,12 +51,18 @@ export const Div1 = styled.div`
 
         position: relative;
 
-        img {
+        .img-container {
           height: 100%;
           width: 100%;
           border-radius: 0.5rem;
           object-fit: cover;
         }
+        /* img {
+          height: 100%;
+          width: 100%;
+          border-radius: 0.5rem;
+          object-fit: cover;
+        } */
 
         @media screen and (min-width: 2000px) {
           height: 350px;

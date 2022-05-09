@@ -5,6 +5,7 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../services/client";
 import { Container } from "./Testimonial.styled";
+import Image from "next/image";
 
 const Testimonial = (props) => {
   const { data } = props[0][0];
@@ -40,7 +41,13 @@ const Testimonial = (props) => {
       {testimonials.length && (
         <Container className="app__flex">
           <div className="item app__flex">
-            <img src={urlFor(test.imgurl)} alt="testimonial" />
+            <div className="img">
+              <Image
+                layout="fill"
+                src={urlFor(test.imgurl)}
+                alt="testimonial"
+              />
+            </div>
             <div className="content">
               <p className="p-text">{test.feedback}</p>
               <div>
@@ -66,7 +73,13 @@ const Testimonial = (props) => {
                 transition={{ duration: 0.5, type: "tween" }}
                 key={brand._id}
               >
-                <img src={urlFor(brand.imgUrl)} alt={brand.name} />
+                <div className="img">
+                  <Image
+                    layout="fill"
+                    src={urlFor(brand.imgUrl)}
+                    alt={brand.name}
+                  />
+                </div>
               </motion.div>
             ))}
           </div>

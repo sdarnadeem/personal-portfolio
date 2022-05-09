@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HeaderComp } from "./Header.styled";
 import { AppWrap } from "../../wrapper";
+import Image from "next/image";
 
 const Header = () => {
   const scaleVariants = {
@@ -58,7 +59,13 @@ const Header = () => {
       >
         {tech.map((circle, index) => (
           <div className="app__flex" key={`circle-${index}`}>
-            <img src={`/images/${circle}.png`} alt="profile_bg" />
+            <div className="img">
+              <Image
+                layout="fill"
+                src={`/images/${circle}.png`}
+                alt="profile_bg"
+              />
+            </div>
           </div>
         ))}
       </motion.div>
@@ -68,4 +75,4 @@ const Header = () => {
 
 export default AppWrap(Header, "home", "", { display: "none" });
 
-const tech = ["flutter", "redux", "sass"];
+const tech = ["react", "redux", "sass"];

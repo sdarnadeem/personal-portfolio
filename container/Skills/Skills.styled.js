@@ -45,8 +45,9 @@ export const Container = styled.div`
           border-radius: 50%;
           aspect-ratio: 1/1;
           background-color: #fff;
+          position: relative;
 
-          img {
+          .img {
             width: 50%;
             height: 50%;
           }

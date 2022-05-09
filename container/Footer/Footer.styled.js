@@ -35,10 +35,11 @@ export const Container = styled.div`
       cursor: pointer;
       background-color: #fef4f5;
       transition: all 0.3s ease-in-out;
-      img {
+      .img {
         width: 40px;
         height: 40px;
         margin: 0 0.7rem;
+        position: relative;
       }
 
       a {

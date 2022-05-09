@@ -6,6 +6,8 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../services/client";
 import { Div1, Div2 } from "./Work.styled";
 
+import Image from "next/image";
+
 const Work = (props) => {
   const { data: works } = props[0][0];
   const [activeFilter, setActiveFilter] = useState("ALL");
@@ -43,19 +45,17 @@ const Work = (props) => {
         <br />
       </h2>
       <Div2>
-        {["UI/UX", "WEB-APP", "MOBILE APP", "REACTJS", "ALL"].map(
-          (item, index) => (
-            <div
-              key={index}
-              onClick={() => handleWorkFilter(item)}
-              className={`item app__flex p-text ${
-                activeFilter === item ? "item-active" : ""
-              }`}
-            >
-              {item}
-            </div>
-          )
-        )}
+        {["UI/UX", "Nextjs", "Reactjs", "All"].map((item, index) => (
+          <div
+            key={index}
+            onClick={() => handleWorkFilter(item)}
+            className={`item app__flex p-text ${
+              activeFilter === item ? "item-active" : ""
+            }`}
+          >
+            {item}
+          </div>
+        ))}
       </Div2>
       <motion.div
         animate={animateCard}
@@ -69,7 +69,13 @@ const Work = (props) => {
             key={work + index}
           >
             <div className="img app__flex">
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <div className="img-container">
+                <Image
+                  layout="fill"
+                  src={urlFor(work.imgUrl)}
+                  alt={work.name}
+                />
+              </div>
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
                 whileTap={{ opacity: [0, 1] }}

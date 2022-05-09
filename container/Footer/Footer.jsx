@@ -4,6 +4,8 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../services/client";
 import { Container } from "./Footer.styled";
 
+import Image from "next/image";
+
 const Footer = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -43,13 +45,17 @@ const Footer = () => {
 
       <div className="cards">
         <div className="card">
-          <img src="/images/email.png" alt="email" />
+          <div className="img">
+            <Image layout="fill" src="/images/email.png" alt="email" />
+          </div>
           <a href="mailto:hello@example.com" className="p-text">
             hello@nadeem.com
           </a>
         </div>
         <div className="card">
-          <img src="/images/mobile.png" alt="mobile" />
+          <div className="img">
+            <Image layout="fill" src="/images/mobile.png" alt="mobile" />
+          </div>
           <a href="tel:+919149575307" className="p-text">
             +91 9149575307
           </a>

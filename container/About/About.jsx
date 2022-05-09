@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Profile } from "./About.styled";
-import { urlFor, client } from "../../services/client";
+import { urlFor } from "../../services/client";
 import { AppWrap, MotionWrap } from "../../wrapper";
+import Image from "next/image";
 
 const About = (props) => {
   const { data: abouts } = props[0][0];
@@ -24,7 +25,13 @@ const About = (props) => {
             className="item"
             key={about.title + index}
           >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
+            <div className="item-img">
+              <Image
+                layout="fill"
+                src={urlFor(about.imgUrl)}
+                alt={about.title}
+              />
+            </div>
             <h2 className="bold-text" style={{ marginTop: "20px" }}>
               {about.title}
             </h2>
