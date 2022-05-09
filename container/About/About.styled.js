@@ -14,12 +14,21 @@ export const Profile = styled.div`
     align-items: flex-start;
     flex-direction: column;
     margin: 2rem;
-    img {
+
+    .item-img {
+      position: relative;
       width: 100%;
       height: 170px;
       border-radius: 15px;
       object-fit: cover;
     }
+
+    /* img {
+      width: 100%;
+      height: 170px;
+      border-radius: 15px;
+      object-fit: cover;
+    } */
 
     @media screen and (min-width: 2000px) {
       width: 370px;

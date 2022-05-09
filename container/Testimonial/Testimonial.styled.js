@@ -15,19 +15,20 @@ export const Container = styled.div`
 
     transition: all 0.3s ease-in-out;
 
-    img {
+    .img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
-      object-fit: cover;
+      position: relative;
     }
 
     @media screen and (min-width: 2000px) {
       min-height: 450px;
 
-      img {
+      .img {
         width: 150px;
         height: 150px;
+        position: relative;
       }
     }
 
@@ -118,16 +119,17 @@ export const Container = styled.div`
     div {
       width: 150px;
       margin: 1.5rem;
+      position: relative;
 
-      img {
+      .img {
         width: 100%;
-        height: auto;
+        height: 70px;
         object-fit: cover;
         filter: grayscale(1);
         cursor: pointer;
       }
       &:hover {
-        img {
+        .img {
           filter: grayscale(0);
         }
       }

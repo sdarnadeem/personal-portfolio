@@ -5,6 +5,7 @@ import ReactTooltip from "react-tooltip";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../services/client";
 import { Container } from "./Skills.styled";
+import Image from "next/image";
 
 const Skills = (props) => {
   const { data } = props[0][0];
@@ -26,7 +27,15 @@ const Skills = (props) => {
                 className="app__flex"
                 style={{ backgroundColor: skill.bgColor }}
               >
-                <img src={urlFor(skill.icon)} alt={skill.name} />
+                <div className="img">
+                  <Image
+                    layout="fill"
+                    src={urlFor(skill.icon)}
+                    alt={skill.name}
+                    placeholder="blur"
+                    blurDataURL={urlFor(skill.icon)}
+                  />
+                </div>
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>
