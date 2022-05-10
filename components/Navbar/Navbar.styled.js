@@ -138,6 +138,9 @@ export const Menu = styled.div`
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
+      @media screen and (min-width: 900px) {
+        display: none;
+      }
 
       div {
         display: none;
