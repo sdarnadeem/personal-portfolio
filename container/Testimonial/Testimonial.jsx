@@ -34,8 +34,6 @@ const Testimonial = (props) => {
     }
   };
 
-  console.log(currentIndex);
-
   return (
     <>
       {testimonials.length && (

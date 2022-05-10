@@ -7,14 +7,10 @@ import { isBrowser } from "framer-motion";
 function MyApp({ Component, pageProps }) {
   const [loading, setIsloading] = useState(true);
 
-  useEffect(() => {
-    console.log(isBrowser);
-  }, []);
+  useEffect(() => {}, []);
 
-  console.log(pageProps);
   return (
     <ThemeProvider theme={theme.light}>
-      {console.log(loading)}
       <GlobalStyle />
       <Component {...pageProps} />
     </ThemeProvider>
