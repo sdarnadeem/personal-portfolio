@@ -32,8 +32,6 @@ const Skills = (props) => {
                     layout="fill"
                     src={urlFor(skill.icon)}
                     alt={skill.name}
-                    placeholder="blur"
-                    blurDataURL={urlFor(skill.icon)}
                   />
                 </div>
               </div>
