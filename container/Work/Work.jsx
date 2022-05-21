@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Work = (props) => {
   const { data: works } = props[0][0];
-  const [activeFilter, setActiveFilter] = useState("ALL");
+  const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [filterWork, setFilterWork] = useState([]);
   const [showButtons, setShowButtons] = useState(null);
