@@ -24,7 +24,9 @@ export default function Home(props) {
         <About data={props.abouts} />
         <Work data={props.works} />
         <Skills data={skillData} />
-        <Testimonial data={reviewsData} />
+        {reviewsData.testimonials && reviewsData.testimonials.length > 0 && (
+          <Testimonial data={reviewsData} />
+        )}
         <Footer />
       </div>
     </>
