@@ -36,7 +36,7 @@ const Testimonial = (props) => {
 
   return (
     <>
-      {testimonials.length && (
+      {testimonials.length > 0 && (
         <Container className="app__flex">
           <div className="item app__flex">
             <div className="img">
