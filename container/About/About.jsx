@@ -11,9 +11,9 @@ const About = (props) => {
     <>
       <h2 className="head-text">
         I know that
-        <span> Good Apps</span>
+        <span> Good Web Apps</span>
         <br />
-        means
+        mean
         <span> Good Business</span>
       </h2>
       <Profile className="app_profiles">

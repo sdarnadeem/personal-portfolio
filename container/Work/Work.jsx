@@ -40,8 +40,8 @@ const Work = (props) => {
   return (
     <Div1>
       <h2 className="head-text">
-        My creative
-        <span> Portfolio</span>
+        My Recent
+        <span> Projects</span>
         <br />
       </h2>
       <Div2>
