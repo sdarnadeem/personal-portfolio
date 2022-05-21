@@ -41,7 +41,7 @@ const Footer = () => {
   };
   return (
     <Container>
-      <h2 className="head-text">Take a coffee and have a chat</h2>
+      <h2 className="head-text">Let's have a chat</h2>
 
       <div className="cards">
         <div className="card">
