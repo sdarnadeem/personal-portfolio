@@ -45,7 +45,15 @@ const Work = (props) => {
         <br />
       </h2>
       <Div2>
-        {["UI/UX", "Nextjs", "Reactjs", "All"].map((item, index) => (
+        {[
+          "UI/UX",
+          "Nextjs",
+          "Reactjs",
+          "Nodejs",
+          "React-Native",
+          "Android",
+          "All",
+        ].map((item, index) => (
           <div
             key={index}
             onClick={() => handleWorkFilter(item)}
